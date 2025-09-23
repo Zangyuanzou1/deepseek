@@ -5,6 +5,9 @@ import EastIcon from '@mui/icons-material/East';
 export default function Home() {
   const [input,setInput] = useState('')
   const [model,setModel] = useState('deepseek-v3')
+  const handleChangeModel = () => {
+    setModel(model === 'deepseek-v3' ? 'deepseek-r1': 'deepseek-v3')
+  }
   return (
     <div className="h-screen flex flex-col items-center">
       <div className="h-1/5"></div>
